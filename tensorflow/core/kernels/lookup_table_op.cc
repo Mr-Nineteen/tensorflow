@@ -211,6 +211,7 @@ class MutableHashTableOfTensors final : public LookupInterface {
         for (int64 j = 0; j < value_dim; j++) {
           value_values(i, j) =
               is_full_size_default ? default_flat(i, j) : default_flat(0, j);
+        }
       }
     }
 
