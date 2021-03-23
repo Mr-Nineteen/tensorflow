@@ -32,7 +32,7 @@ class DistributedRuntimeClient {
   DistributedRuntimeClient(std::shared_ptr<::grpc::Channel> channel,
                            absl::Duration rpc_timeout);
   explicit DistributedRuntimeClient(std::shared_ptr<::grpc::Channel> channel)
-      : DistributedRuntimeClient(channel, absl::Seconds(120)) {}
+      : DistributedRuntimeClient(channel, absl::Seconds(300)) {}
   ~DistributedRuntimeClient();
 
   xla::Status Connect(const LocalTopologyProto& local_topology,
